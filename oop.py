@@ -1,37 +1,35 @@
+user_peter = {
+    "name": "Peter",
+    "email": "peterrobertson@mail.com",
+    "created_at": "2019-05-05",
+    "is_email_verified": True,
+    "purchases": ["Egg", "Spam", "Hat", "Knife", "Shield", "Book of Knight secrets"],
+}
 
-a = int(5)
-s = str('5')
-print(type(a))
-print(type(s))
+user_julia = {
+    "name": "Julia Donaldson",
+    "email": "juliadonaldson@mail.com",
+    "created_at": "2019-06-13",
+    "is_email_verified": True,
+    "purchases": ["Egg", "Spam", "Magic Brush"],
+}
 
-class Car:
-    def __init__(self, name, model, color, **kwargs):
+product_eggs = {
+    "name": "Egg",
+    "category": "food",
+    "is_available": False,
+    "quantity_in_stock": 0,
+    "vendor": "Dark Knight LTD",
+    "manager": "William The Conqueror",
+}
+
+class User:
+    def __init__(self, name, email):
         self.name = name
-        self.model = model
-        self.color = color
-        if 'hp' in kwargs:
-            self.hp = kwargs['hp']
-        else:
-            self.hp = 86
+        self.email = email
 
-    def tunning(self, power):
-        self.hp += power
+peter = User(name="Peter Robertson", email="peterrobertson@mail.com")
+julia = User(name="Julia Donaldson", email="juliadonaldson@mail.com")
 
-    def info(self):
-        print('My', self.name, self.model, 'has', self.hp, 'HP', 'the car is', self.color )
-
-
-
-audi = Car('Audi', 'a4', 'red')
-bmw = Car('BMW', '3201', 'Wite')
-lada = Car('ЖИГУЛИ', 'VAZ2108', 'green')
-bmw.tunning(101)
-audi.tunning(9)
-print(audi.hp)
-
-print(lada.hp)
-print(bmw.hp)
-
-audi.info()
-bmw.info()
-lada.info()
+print(peter.name, peter.email)
+print(julia.email)
