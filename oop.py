@@ -24,12 +24,13 @@ product_eggs = {
 }
 
 class User:
-    def __init__(self, name, email):
+    def __init__(self, name, email, purchases):
         self.name = name
         self.email = email
+        self.purchases = purchases
 
-peter = User(name="Peter Robertson", email="peterrobertson@mail.com")
-julia = User(name="Julia Donaldson", email="juliadonaldson@mail.com")
+peter = User(name="Peter Robertson", email="peterrobertson@mail.com", purchases = ["Egg", "Spam", "Hat", "Knife", "Shield", "Book of Knight secrets"])
 
-print(peter.name, peter.email)
-print(julia.email)
+
+
+print(peter.name, peter.email, peter.purchases)
